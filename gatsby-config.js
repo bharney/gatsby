@@ -3,6 +3,7 @@ module.exports = {
     title: 'Bad Boy Bri Bri',
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
