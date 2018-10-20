@@ -1,14 +1,13 @@
 import React from 'react'
-import Img from "gatsby-image"
+import profile from './profile.jpg'
 import { rhythm } from '../utils/typography'
 
 // Import typefaces
 import 'typography-theme-bootstrap'
-type BioProps = any
-class Bio extends React.Component<BioProps, {}> {
-  
+// type BioProps = any
+class Bio extends React.Component {
+
   render() {
-    const { data } = this.props
     return (
       <div
         style={{
@@ -16,13 +15,15 @@ class Bio extends React.Component<BioProps, {}> {
           marginBottom: rhythm(2.5),
         }}
       >
-       <Img fluid={data.profile.childImageSharp.fluid}
-       alt={`Brian Harney`}
+        <img
+          src={profile}
+          alt={`Brian Harney`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
-            width: rhythm(2),
-            height: rhythm(2),
+            width: rhythm(3),
+            height: rhythm(3),
+            borderRadius: "50%"
           }} />
         <p>
           Written by <strong>Brian Harney</strong> who lives Oakland and loves building incredible software.{' '}

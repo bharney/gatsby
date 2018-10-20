@@ -6,8 +6,8 @@ import get from 'lodash/get'
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
-type AppProps = any
-class BlogPostTemplate extends React.Component<AppProps, {}> {
+// type AppProps = any
+class BlogPostTemplate extends React.Component {
   render() {
     const post  = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -38,7 +38,7 @@ class BlogPostTemplate extends React.Component<AppProps, {}> {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio {...this.props} />
+        <Bio />
         <ul
           style={{
             display: 'flex',
@@ -87,13 +87,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-      }
-    }
-    profile: file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
       }
     }
   }

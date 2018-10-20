@@ -8,12 +8,12 @@ import Footer from "./footer";
 import "./layout.css";
 import { rhythm } from "../utils/typography";
 
-type LayoutProps = any;
+// type LayoutProps = any;
 // type LayoutProps = {
 //   children: JSX.Element[];
 //   location: any;
 // };
-export class Layout extends React.Component<LayoutProps, {}> {
+export class Layout extends React.Component {
   render() {
     return (
       <StaticQuery
