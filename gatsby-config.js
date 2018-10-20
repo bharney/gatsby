@@ -2,9 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'Bad Boy Bri Bri',
     author: 'Brian Harney',
-    description: 'A blog about building incredible software.',
+    description: 'A Blog about building incredible software.',
     siteUrl: 'https://https://bharney.azureedge.net/',
   },
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -15,21 +16,13 @@ module.exports = {
         },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: 
-        {
-          path: `${__dirname}/src/images`,
-          name: 'images',
-        },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 407,
             },
           },
           {
@@ -40,12 +33,12 @@ module.exports = {
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
-        ],
+          'gatsby-remark-smartypants',
+        ], 
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typography',
@@ -54,8 +47,8 @@ module.exports = {
       },
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Brian Harneys Blog',
+        short_name: 'bharney',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -66,3 +59,4 @@ module.exports = {
     'gatsby-plugin-offline',
   ],
 }
+ 

@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
-type NotFoundProps = {
-  children: JSX.Element[];
-  location: any;
-};
-export class NotFoundPage extends React.Component<NotFoundProps, {}> {
+// type NotFoundProps = {
+//   children: JSX.Element[];
+//   location: any;
+// };
+export class NotFoundPage extends React.Component{
   render() {
     return (
       <Layout {...this.props}>

@@ -6,12 +6,12 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
-type IndexProps = any
+// type IndexProps = any
 // type IndexProps = {
 //   children: JSX.Element[];
 //   location: any;
 // };
-export class IndexPage extends React.Component<IndexProps, {}> {
+export class IndexPage extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -26,7 +26,7 @@ export class IndexPage extends React.Component<IndexProps, {}> {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <Bio {...this.props} />
+        <Bio />
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
@@ -71,13 +71,6 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
           }
-        }
-      }
-    }      
-    profile: file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

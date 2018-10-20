@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 
-type HeaderProps = {
-  siteTitle: string;
-};
+// type HeaderProps = {
+//   siteTitle: string;
+// };
 
-export class Header extends React.Component<HeaderProps, {}> {
+export class Header extends React.Component {
   render() {
     const { siteTitle } = this.props;
 
