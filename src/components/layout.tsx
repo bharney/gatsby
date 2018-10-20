@@ -4,12 +4,15 @@ import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
+import Footer from "./footer";
 import "./layout.css";
+import { rhythm } from "../utils/typography";
 
-type LayoutProps = {
-  children: JSX.Element[];
-};
-
+type LayoutProps = any;
+// type LayoutProps = {
+//   children: JSX.Element[];
+//   location: any;
+// };
 export class Layout extends React.Component<LayoutProps, {}> {
   render() {
     return (
@@ -35,16 +38,18 @@ export class Layout extends React.Component<LayoutProps, {}> {
               <html lang="en" />
             </Helmet>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div
+            <main
+              role="main"
               style={{
-                margin: "0 auto",
-                maxWidth: 960,
-                padding: "0px 1.0875rem 1.45rem",
-                paddingTop: 0
+                marginLeft: "auto",
+                marginRight: "auto",
+                maxWidth: rhythm(24),
+                padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
               }}
             >
               {this.props.children}
-            </div>
+            </main>
+            <Footer siteTitle={data.site.siteMetadata.title} />
           </>
         )}
       />
