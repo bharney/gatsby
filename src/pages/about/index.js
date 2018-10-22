@@ -3,10 +3,10 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
-import Intro from '../components/Intro'
-import Layout from '../components/layout'
-import { rhythm } from '../utils/typography'
+import Bio from '../../components/Bio'
+import Intro from '../../components/Intro'
+import Layout from '../../components/layout'
+import { rhythm } from '../../utils/typography'
 // type IndexProps = any
 // type IndexProps = {
 //   children: JSX.Element[];
@@ -20,7 +20,6 @@ export class IndexPage extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
-    debugger;
       return (
         <Layout {...this.props}>
         <Helmet
