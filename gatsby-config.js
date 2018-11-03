@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Bad Boy Bri Bri',
+    title: "Brian Harney's Blog",
     author: 'Brian Harney',
     description: 'A Blog about building incredible software.',
     siteUrl: 'https://https://bharney.azureedge.net/',
