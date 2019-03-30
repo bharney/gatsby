@@ -21,8 +21,8 @@ export class IndexPage extends React.Component {
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
     debugger;
-      return (
-        <Layout {...this.props}>
+    return (
+      <Layout {...this.props}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
