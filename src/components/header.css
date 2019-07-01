@@ -30,5 +30,21 @@ li > a {
 }
 
 .secondary-nav-items li {
+<<<<<<< Updated upstream
     padding-right: 25px;
 }
+=======
+  padding-right: 25px;
+}
+
+@media all and (max-width: 360px) {
+  .secondary-nav-items li {
+      padding-right: 22px;
+  }
+}
+@media all and (max-width: 320px) {
+  .secondary-nav-items li {
+      padding-right: 17px;
+  }
+}
+>>>>>>> Stashed changes
